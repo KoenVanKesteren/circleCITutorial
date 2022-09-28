@@ -6,6 +6,7 @@ CircleCI tutorial
 -----------------
 
 	algemeen
+	--------
 		
 		- we hebben een simpel script gemaakt
 		- met een unit test
@@ -13,8 +14,14 @@ CircleCI tutorial
 		- hiervoor hebben we npm gebruikt
 		- zodat we Jest kunnen gebruiken voor de tests
 
+		- de lokale repo is gelinkt aan een github repo
+		
+		- vervolgens is de github repo gelinkt aan circleCI
+		- zodra we pushen naar de github repo wordt circelCI automatisch gedraaid
+
 
 	unit testing
+	------------
 
 		instructies opzetten npm project:
 
@@ -46,6 +53,7 @@ CircleCI tutorial
 
 
 	git project
+	-----------
 
 		- git project maken:		"git init"
 
@@ -62,17 +70,19 @@ CircleCI tutorial
 
 
 	circelCI
+	--------
 
 		tutorial: https://www.youtube.com/watch?v=0OjEx2UzLUI&list=PLRqwX-V7Uu6bLqwFa52YGEHy-L1-D_Ve-&index=4&ab_channel=TheCodingTrain
 
-		- de config.yml
+		- de config.yml:
+
 			- moet in een folder met de naam '.circleci'
 			- jobs:
 				"
 					jobs:
 						build:
 							docker:
-							- image: circleci/node:<node versie>
+							- image: circleci/node:current
 
 							steps:
 								- checkout
@@ -80,5 +90,13 @@ CircleCI tutorial
 								- run: <uit te voeren stap 2>
 								- run: <uit te voeren stap 3>
 				"
-
 			- 1e step moet zijn:  "checkout"	 ( ! DUS NIET "- run: checkout")
+
+		- opletten:
+
+			- package-lock.json niet in .gitignore! CircleCI gebruikt die
+			- gebruik de laatste versie van node voor de docker image:
+						"
+							docker:
+								- image: circleci/node:current
+						"
