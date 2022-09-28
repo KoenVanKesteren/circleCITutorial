@@ -1,0 +1,17 @@
+{
+  "name": "testingtesttest",
+  "version": "1.0.0",
+  "description": "unit test project",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Koen",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.1.1"
+  }
+}
