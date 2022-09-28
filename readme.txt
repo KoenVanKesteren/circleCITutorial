@@ -59,3 +59,26 @@ CircleCI tutorial
 				"git remote add origin https://github.com/KoenVanKesteren/circleCITutorial.git"
 
 		- pushen naar github:		"git push origin master"
+
+
+	circelCI
+
+		tutorial: https://www.youtube.com/watch?v=0OjEx2UzLUI&list=PLRqwX-V7Uu6bLqwFa52YGEHy-L1-D_Ve-&index=4&ab_channel=TheCodingTrain
+
+		- de config.yml
+			- moet in een folder met de naam '.circleci'
+			- jobs:
+				"
+					jobs:
+						build:
+							docker:
+							- image: circleci/node:<node versie>
+
+							steps:
+								- checkout
+								- run: <uit te voeren stap 1>
+								- run: <uit te voeren stap 2>
+								- run: <uit te voeren stap 3>
+				"
+
+			- 1e step moet zijn:  "checkout"	 ( ! DUS NIET "- run: checkout")
