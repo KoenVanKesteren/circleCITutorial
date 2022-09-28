@@ -48,3 +48,14 @@ CircleCI tutorial
 	git project
 
 		- git project maken:		"git init"
+
+
+		- linken aan Github:
+
+			optie 1) nieuwe repo in github en dan lokaal clonen
+
+			optie 2) lokale repo linken aan github repo
+				
+				"git remote add origin https://github.com/KoenVanKesteren/circleCITutorial.git"
+
+		- pushen naar github:		"git push origin master"
