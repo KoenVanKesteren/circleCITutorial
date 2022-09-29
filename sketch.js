@@ -1,7 +1,7 @@
 
 function sum(a,b){
 
-	return a + b + 40;
+	return a + b;
 }
 
 
